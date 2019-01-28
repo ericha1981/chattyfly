@@ -1,0 +1,74 @@
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    min-width: 510px;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    margin: 0;
+
+    background-image: url('../assets/images/painted-wood-background-with-pastel-colors-in-soft-vintage-style.jpg'); 
+}
+
+.header__title h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.navbar-bg {
+    background-color: #470630;
+    /* background-color: #6d465e; */
+    color: #f4dd54;
+    font-weight: 800;
+
+    max-height: 38vh;
+}
+
+hr {
+    color: #f4dd54;
+}
+
+#enteredMsg {
+    margin-right: 5px;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    opacity: 0.98;
+    background-color: #470630;
+}
+
+.messagebox {
+    width: 100%;
+}
+
+#wrapper__chatbox {
+    flex: 1;
+    margin: 18px auto;
+}
+
+#sentMsgBox {
+    background-color: #8b0147;
+    color: #efefef;
+    padding: 12px;
+    height: 100%;
+    max-height: 62vh;
+    border: 1px solid #eee;
+    border-radius: 6px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.glitter-border {
+    box-shadow: 2px 2px 24px rgb(255, 246, 227);
+}

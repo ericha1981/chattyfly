@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Custom JavaScript code -->
+    <script src="index.js"></script>
+    <title>User Window</title>
+</head>
+<body>
+    <div class="container">
+        <p>Server says:</p>
+        <section class="serverMsg">
+    
+        </section>
+        
+        <div class="messagebox">
+            <p>You say:</p>
+            <input id="myMsg" 
+                type="text" 
+                class="form-control" 
+                aria-label="Notify input" 
+                placeholder="Send my msg to everyone!" 
+                aria-describedby="inputGroup-sizing-lg">
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="notiflyAll()">Notifly!</button>
+        </div>
+    </div>
+</body>
+</html>

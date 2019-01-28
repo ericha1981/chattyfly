@@ -1,0 +1,16 @@
+* {
+    /* font-size: 14px; */
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+.messagebox {
+    margin-left: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
