@@ -1,76 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/server.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,800"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/server.css" />
+
     <!-- Custom JavaScript code -->
-    <title>Chatfly - Secret Channel Open!</title>
-</head>
-<body>
+    <title>Chattyfly - Secret Channel Open!</title>
+  </head>
+  <body>
     <div class="wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-            <div class="header__title container-fluid">
-                <h1>Chattyfly</h1>
-                <h4>Welcome, <span id="username"></span>!</h4>
-            </div>
-            <div>
-                <ul class="navbar-nav mr auto">
-                    <li class="nav-item">
-                        <label class="nav-link" onclick="logOut()" style="cursor: pointer; color: greenyellow;">(Logout)</label>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <hr />
-
-        <div class="messagebox container">
-            <div class="input-group input-group-lg">
-                <div class="input-group-prepend glitter-border">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">Your flychat</span>
-                </div>
-                <input id="enteredMsg" 
-                    type="text" 
-                    class="form-control glitter-border" 
-                    aria-label="Notify input" 
-                    placeholder="Send this to everyone woohoo!" 
-                    aria-describedby="inputGroup-sizing-lg">
-                <button class="btn btn-outline-success my-2 my-sm-0 glitter-border" onclick="notiflyAll()">Chattyfly!</button>
-            </div>
+      <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+        <div class="header__title container-fluid">
+          <h1>Chattyfly</h1>
+          <h4>Welcome, <span id="username"></span>!</h4>
         </div>
-        
-        <!-- display entered message -->
-        <div class="container" id="wrapper__chatbox">
-            <div id="sentMsgBox" class="glitter-border">
-                <p id="sentMsg">
-        
-                </p>
-            </div>
-            <div id="log" style="color: #efefef; position: relative; margin-top: 13px;"></div>
+        <div>
+          <ul class="navbar-nav mr auto">
+            <li class="nav-item">
+              <label
+                class="nav-link"
+                onclick="logOut()"
+                style="cursor: pointer; color: greenyellow;"
+                >(Logout)</label
+              >
+            </li>
+          </ul>
         </div>
+      </nav>
 
+      <hr />
 
-        <!-- <div class="pull-right listbox" style="color: #00692c">
+      <div class="messagebox container">
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend glitter-border">
+            <span class="input-group-text" id="inputGroup-sizing-lg"
+              >Your flychat</span
+            >
+          </div>
+          <input
+            id="enteredMsg"
+            type="text"
+            class="form-control glitter-border"
+            aria-label="Notify input"
+            placeholder="Send this to everyone woohoo!"
+            aria-describedby="inputGroup-sizing-lg"
+          />
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 glitter-border"
+            onclick="notiflyAll()"
+          >
+            Chattyfly!
+          </button>
+        </div>
+      </div>
+
+      <!-- display entered message -->
+      <div class="container" id="wrapper__chatbox">
+        <div id="sentMsgBox" class="glitter-border">
+          <p id="sentMsg"></p>
+        </div>
+        <div
+          id="log"
+          style="color: #efefef; position: relative; margin-top: 13px;"
+        ></div>
+      </div>
+
+      <!-- <div class="pull-right listbox" style="color: #00692c">
             Users online
         </div> -->
     </div>
-</body>
-<script>
+  </body>
+  <script>
     // Event listener
-    document.body.addEventListener('keyup', (e) => {
-        if ( e.keyCode == 13 ) {
-            notiflyAll();
-        }
+    document.body.addEventListener("keyup", e => {
+      if (e.keyCode == 13) {
+        notiflyAll();
+      }
     });
-</script>
-<script src="/socket.io/socket.io.js"></script>
-<script src="chattyfly-client.js"></script>
-<script src="deparam.js"></script>
+  </script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chattyfly-client.js"></script>
+  <script src="deparam.js"></script>
 </html>
-
