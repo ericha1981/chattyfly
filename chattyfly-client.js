@@ -102,5 +102,5 @@ logOut = () => {
     });
 
     // Redirect
-    location.replace("http://localhost:5000/login");
+    location.replace("/login");
 }
